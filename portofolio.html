@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portofolio PKL - Syifa Maylani</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://via.placeholder.com/32" type="image/png">
 
   <style>
     * {
@@ -84,6 +87,10 @@
       margin-bottom: 2rem;
     }
 
+    .profile {
+      text-align: center;
+    }
+
     .profile img {
       width: 120px;
       height: 120px;
@@ -100,6 +107,7 @@
 
     .education ul, .pengalaman ul {
       list-style: none;
+      padding-left: 0;
     }
 
     .education li, .pengalaman li {
@@ -150,20 +158,27 @@
       margin: 5px 0;
     }
 
-    @mmedia(max-width: 768px) {
+    /* ✅ Responsive Fix */
+    @media (max-width: 768px) {
       section {
         padding: 2rem 5%;
       }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
     }
- </style>
+  </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <h1>Portofolio PKL - Syifa Maylani</h1>
     <p>Rekayasa Perangkat Lunak | SMK Informatika Utama</p>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="#profil">Profil</a>
     <a href="#pendidikan">Pendidikan</a>
@@ -171,15 +186,15 @@
     <a href="#portofolio">Portofolio</a>
   </nav>
 
+  <!-- Profil Section -->
   <section id="profil" class="profile">
-    <center>
-      <img src="https://via.placeholder.com/120" alt="Foto Profil">
-      <h3>Syifa Maylani</h3>
-      <p>Saya adalah siswi SMK Informatika Utama jurusan Rekayasa Perangkat Lunak (RPL). 
-         Saya memiliki ketertarikan dalam pengembangan web dan ingin mengembangkan kemampuan saya melalui kegiatan Praktik Kerja Lapangan (PKL).</p>
-    </center>
+    <img src="https://via.placeholder.com/120" alt="Foto Profil">
+    <h3>Syifa Maylani</h3>
+    <p>Saya adalah siswi SMK Informatika Utama jurusan Rekayasa Perangkat Lunak (RPL). 
+       Saya memiliki ketertarikan dalam pengembangan web dan ingin mengembangkan kemampuan saya melalui kegiatan Praktik Kerja Lapangan (PKL).</p>
   </section>
 
+  <!-- Pendidikan -->
   <section id="pendidikan" class="education">
     <h2>Pendidikan</h2>
     <ul>
@@ -189,6 +204,7 @@
     </ul>
   </section>
 
+  <!-- Pengalaman -->
   <section id="pengalaman" class="pengalaman">
     <h2>Pengalaman</h2>
     <ul>
@@ -197,18 +213,19 @@
     </ul>
   </section>
 
+  <!-- Portofolio -->
   <section id="portofolio" class="portfolio">
     <h2>Portofolio Proyek</h2>
-    <div class="portfolio-cards" id="portfolio-list">
-      <!-- Data Dummy akan diisi oleh JS -->
-    </div>
+    <div class="portfolio-cards" id="portfolio-list"></div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Syifa Maylani | Portofolio PKL</p>
-    <p>Email: syifamaylani@example.com | Instagram: @syifamaylani</p>
+    <p>Email: <a href="mailto:syifa.maylani@smk.belajar.id" style="color: #7a77ff;">syifa.maylani@smk.belajar.id</a></p>
   </footer>
 
+  <!-- JavaScript -->
   <script>
     const portfolioData = [
       {
